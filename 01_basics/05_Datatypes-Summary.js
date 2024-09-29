@@ -30,3 +30,27 @@ function printName(name) {
 printName("jay") //==>function
 
 console.log(typeof printName);
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Stack (Primitive)it's provide copd , Heap (Non - Primitive) it's provide references
+
+/* let Name = "jay"
+
+let SecondName = Name
+SecondName = "patel"
+
+console.log(SecondName);
+console.log(Name); */
+
+/* let UserOne = {
+    Email : "jay@gmail.com",
+    Upi : "51@boi.in"
+} 
+
+UserTow = UserOne
+UserTow.Email = "patel's.com"
+console.log(UserOne.Email);
+console.log(UserTow.Email); */
