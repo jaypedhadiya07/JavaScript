@@ -58,3 +58,30 @@ const apidata = [
 ]
 console.log(apidata[0].Name);
 console.log(YoutubeUser.hasOwnProperty("Name"));
+
+
+
+const Course = {
+    CourseName: "javaScript",
+    CourseInstructor: "divyanshu",
+    Price: 3333
+}
+console.log(Course.CourseInstructor); //CourseInstructor
+const {CourseInstructor : ok} = Course
+console.log(ok); // CourseInstructor
+
+
+//JSON
+/*{
+    "Name": "jay",
+    "Age": 19,
+    "id": "123abc"
+}*/
+/*
+    [
+        {},
+        {},
+        {},
+        {},
+    ]
+*/
