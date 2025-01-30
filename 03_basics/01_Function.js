@@ -32,3 +32,34 @@ function loginUserMessage(username = "jay"){ // default value = "jay"
 }
 console.log(loginUserMessage()); //undefined Just Logged In!
 console.log(loginUserMessage("jay")); //jay Just Logged In!
+
+
+const user = {
+    itemName: "Book",
+    Price: 190
+}
+function HandleObject(anyObject) {
+    console.log(`item name is ${anyObject.itemName} and his price is ${anyObject.Price}`);
+}
+// HandleObject(user) //item name is Book and his price is 190
+HandleObject({
+    itemName: "book",
+    Price: 2000
+})
+
+// Array
+
+// const prices = [100, 200, 300, 400]
+// function priceSecondValue(secondprice){
+//     console.log(`Seconprice is ${secondprice[1]}`);
+// }
+// priceSecondValue(prices) // 200
+// priceSecondValue([100,1000,2000,3000]) // 1000
+
+//Aarry All value Print
+const prices = [100, 200, 300, 400]
+
+function allPriceAllValue(...allvalue){
+    return allvalue;
+}
+console.log(allPriceAllValue(10,20,30));
