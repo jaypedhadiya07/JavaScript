@@ -20,3 +20,31 @@ function one(){
     two()
 }
 one()
+
+
+if(true){
+    const UserName = "yash"
+    if(UserName === "yash"){
+        const Website = " youtuber"
+        console.log(UserName + Website);
+    }
+    // console.log(Website); // Error
+}
+// console.log(UserName); // Error
+
+
+// ++++++++++++++++++ important ++++++++++++++++++++
+
+console.log(addOneValue(10)); // 11 it's allow
+function addOneValue(num){
+    return num + 1
+}
+// console.log(addOneValue(10)); // 11 it's allow
+
+
+
+// console.log(addTwoValue(10)); // Error and it's not allow
+const addTwoValue = function (num){
+    return num + 2
+}
+// console.log(addTwoValue(10)); // 12 it's allow
