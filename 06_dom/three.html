@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    
+</body>
+<script>
+    const div = document.createElement("div")
+    console.log(div);
+    div.setAttribute("title","title")
+    div.className = "main"
+    div.id = "maindiv"
+    div.style.backgroundColor = "green"
+    div.innerText = "jay and yash"
+    const text = document.createTextNode("jay")
+    div.appendChild(text)
+    document.body.appendChild(div)
+
+</script>
+</html>
