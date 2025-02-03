@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>DOM</title>
@@ -10,10 +11,68 @@
         color: white;
     }
 </style>
+
 <body class="bg-black">
     <div>
-        <h1 class="heading">DOM</h1>
+        <h1 id="title" class="heading">DOM <span id="secondText" style="display: none;">learning</span></h1>
+        <h2>one</h2>
+        <h2>two</h2>
+        <h2>three</h2>
+        <input type="text">
+        <ul>
+            <li class="list">1</li>
+            <li class="list">2</li>
+            <li class="list">3</li>
+            <li class="list">4</li>
+        </ul>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
 </body>
+
 </html>
+<script>
+    console.log(window.document);
+    console.log(document);
+    console.dir(document)
+    console.log(document.getElementById('title').id); //title
+    console.log(document.getElementById('title').class); //undefined
+    console.log(document.getElementById('title').className); //heading
+
+    console.log(document.getElementById('title').getAttribute('id')); // title
+    console.log(document.getElementById('title').getAttribute('class')); // heading
+    console.log(document.getElementById('title').setAttribute('class', "head heading"));
+    const title = document.getElementById('title')
+    title.style.backgroundColor = "orange"
+    title.style.padding = "20px"
+    title.style.margin = "20px"
+    title.style.borderRadius = "20px"
+    console.log(title.innerHTML); // DOM <span id="secondText" style="display: none;">learning</span>
+    console.log(title.innerText); // display : none not visible OUTPUT :DOM 
+    console.log(title.textContent); // display : none is visible OUTPUT :DOM learning
+    console.log(document.querySelector("#title"));
+    console.log(document.querySelector(".title"));
+
+    console.log(document.querySelector('h2').style.backgroundColor = "green");
+
+
+    let myul = document.querySelector('ul')
+    console.log(myul.querySelector('li').style.backgroundColor = "green");
+    
+
+    const nodelist = document.querySelectorAll('h2');
+    nodelist[2].style.color = "yellow" // also index pass
+
+    const allli = document.querySelectorAll('li');
+    allli.forEach(function (value) {
+        value.style.backgroundColor = "yellow" 
+    })
+    allli.forEach( (value) => {
+        value.style.color = "red" 
+    })
+
+    const arrlist = document.getElementsByClassName('list');
+    const myConvertedArray = Array.from(arrlist)
+    myConvertedArray.forEach(function (value){
+        value.style.color = "blue"
+    })
+</script>
