@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(242, 187, 242);">
+    <h2 style="color: black;">Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="250px" style="border-radius: 15px;"
+                    src="https://images.pexels.com/photos/29319296/pexels-photo-29319296/free-photo-of-detail-of-vatican-city-ceiling-frescos-with-art.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="img1"></li>
+            <li><img width="250px" style="border-radius: 15px;"
+                    src="https://images.pexels.com/photos/27553420/pexels-photo-27553420/free-photo-of-a-table-setting-with-white-plates-and-gold-place-settings.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="img2"></li>
+            <li><img width="250px" style="border-radius: 15px;"
+                    src="https://images.pexels.com/photos/30241292/pexels-photo-30241292/free-photo-of-elegant-parisian-street-with-classic-architecture.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="img3"></li>
+            <li><img width="250px" style="border-radius: 15px;"
+                    src="https://images.pexels.com/photos/4346306/pexels-photo-4346306.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="img4"></li>
+            <li><img width="250px" style="border-radius: 15px;"
+                    src="https://images.pexels.com/photos/30352309/pexels-photo-30352309/free-photo-of-majestic-mount-fuji-framed-by-autumn-leaves.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                    alt="" id="img5"></li>
+            <li><a href="https://google.com" id="google" style="color: aliceblue;">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('img3').onclick = function(){
+    //     alert("img3 clicked")
+    // } // not a perfect way 
+
+
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // })
+
+
+    // false is default
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log("click inside in the ul");
+    // }, false) 
+    // document.getElementById('img3').addEventListener('click', function (e) {
+    //     console.log("image three clicked");
+    // }, false)
+    /*
+    first output is image three clicked
+    second output is click inside in the ul
+    */
+
+
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log("click inside in the ul");
+    // }, true) 
+    // document.getElementById('img3').addEventListener('click', function (e) {
+    //     console.log("image three clicked");
+    // }, true)
+    /*
+    first output is click inside in the ul
+    second output is image three clicked
+    */
+
+
+    //also false keyWord use stopPropagation function
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log("click inside in the ul");
+    // }, false)
+    // document.getElementById('img3').addEventListener('click', function (e) {
+    //     console.log("image three clicked");
+    //     e.stopPropagation()
+    // }, false)
+    /*
+    output is image three clicked
+    */
+
+
+
+    // remove img 
+
+    document.querySelector('#images').addEventListener('click', (e) => {
+        console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            // removeIt.parentNode.removeChild(removeIt) // second way
+            removeIt.remove()
+        }
+    })
+
+</script>
+
+</html>
