@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JAY</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function () {
+    //     console.log("Yash");
+    // }, 2000)
+
+
+
+    const startbtn = document.querySelector("#start")
+    const stopbtn = document.querySelector("#stop")
+    // let q;
+    // let changeName = function () {
+    //     document.querySelector('h1').innerHTML = "yash"
+    // }
+    // startbtn.addEventListener("click", () => {
+    //     q = setTimeout(changeName, 2000)
+    // })
+    // stopbtn.addEventListener('click', () => {
+    //     clearTimeout(q)
+    // })
+
+
+
+    // *************  Setinterval & clearinterval
+
+    
+    let clear;
+    const sayData = function num(a) {
+        console.log(a, "123");
+    }
+
+    startbtn.addEventListener('click', () => {
+        clear = setInterval(sayData, 1000, "hii")
+    })
+
+    stopbtn.addEventListener('click', () => {
+        clearInterval(clear)
+    })
+
+</script>
+
+</html>
