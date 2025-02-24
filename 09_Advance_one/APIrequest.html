@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Value State Description
+    </h1>
+    <h1>0 UNSENT Client has been created. open() not called yet.</h1>
+    <h1>1 OPENED open() has been called.</h1>
+    <h1>2 HEADERS_RECEIVED send() has been called, and headers and status are available.</h1>
+    <h1>3 LOADING Downloading; responseText holds partial data.</h1>
+    <h1>4 DONE The operation is complete.</h1>
+</body>
+<script>
+    const url = "https://api.github.com/users/hiteshchoudhary"
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', url)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4){
+            let data = JSON.parse(this.responseText)
+            console.log(data.login);
+        }
+    }
+    xhr.send()
+</script>
+
+</html>
